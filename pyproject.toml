@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "isoforge-characterize"
+version = "0.1.0"
+description = "SQANTI3 characterisation of an IsoForge transcriptome: classification attributes, CDS and codon features, and BED12"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Mustafa Elshani"}]
+readme = "README.md"
+dependencies = ["pandas>=1.5"]
+
+[project.scripts]
+isoforge-characterize = "isoforge_characterize.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
